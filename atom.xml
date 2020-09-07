@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Kardusen664.github.io</id>
     <title>Gridea</title>
-    <updated>2020-09-07T05:00:27.463Z</updated>
+    <updated>2020-09-07T05:00:51.830Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Kardusen664.github.io"/>
     <link rel="self" href="https://Kardusen664.github.io/atom.xml"/>
@@ -10,6 +10,27 @@
     <logo>https://Kardusen664.github.io/images/avatar.png</logo>
     <icon>https://Kardusen664.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[排序]]></title>
+        <id>https://Kardusen664.github.io/post/pai-xu/</id>
+        <link href="https://Kardusen664.github.io/post/pai-xu/">
+        </link>
+        <updated>2020-09-07T04:21:57.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="1龟速三兄弟">1.龟速三兄弟</h2>
+<p>①.冒泡排序<br>
+如这个排序的名字一样，冒泡排序就是：从末尾一个数开始，两两<strong>比较</strong>，从而得出最小的数，最小的数就像泡泡那样冒上来，依次得出第二小的数、第三小的数...直至排序完毕。</p>
+<p>②.选择排序<br>
+又如这个排序一样，选择排序的原理是固定一个位置，让该位置的数与其他数进行<strong>比较</strong>来争夺这个位置，从而最小的数被选择出来，依此类推直至排序完毕。</p>
+<p>③.插入排序<br>
+在玩扑克牌时，我们总是希望手中的牌是有序的，每当摸到一张新牌，我们总是会和前面有序的牌组两两<strong>比较</strong>，然后插入序列中。<br>
+插入排序便是基于这样一种思想，把第1个数作为一个有序的序列，依次将第2、第3...第n个数插入到有序的序列中，就完成了插入排序的过程。<br>
+代码：<br>
+for(int i=0; i&lt;n; i++)<br>
+for(int j=i+1; j&gt;0; j--)<br>
+if(a[j] &gt; a[j-1]) swap(a[j])<br>
+else break;(提高效率)</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Markdown应用指南]]></title>
         <id>https://Kardusen664.github.io/post/markdown-ying-yong-zhi-nan/</id>
