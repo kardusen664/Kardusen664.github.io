@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Kardusen664.github.io</id>
     <title>Gridea</title>
-    <updated>2020-09-09T13:57:24.172Z</updated>
+    <updated>2020-09-09T13:57:51.537Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Kardusen664.github.io"/>
     <link rel="self" href="https://Kardusen664.github.io/atom.xml"/>
@@ -104,7 +104,7 @@ sort函数的模板有三个参数：<br>
 <li>在文字前添加' &gt;'</li>
 </ul>
 <p><strong>写代码</strong><br>
-用``把代码框起来，就可以在里面使用tab缩进啦！</p>
+用```把代码框起来，就可以在里面使用tab缩进啦！</p>
 <p><strong>划掉</strong><br>
 <s>在文字前后加上两条波浪线</s></p>
 ]]></content>
