@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>排序 | Gridea</title>
-<link rel="shortcut icon" href="https://Kardusen664.github.io/favicon.ico?v=1599454839396">
+<link rel="shortcut icon" href="https://Kardusen664.github.io/favicon.ico?v=1599659836405">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://Kardusen664.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="排序 | Gridea - Atom Feed" href="https://Kardusen664.github.io/atom.xml">
@@ -13,9 +13,10 @@
 
     <meta name="description" content="1.龟速三兄弟
 ①.冒泡排序
-如这个排序的名字一样，冒泡排序就是：从末尾一个数开始，两两比较，从而得出最小的数，最小的数就像泡泡那样冒上来，依次得出第二小的数、第三小的数...直至排序完毕。
+如这个排序的名字一样，冒泡排序就是：从末尾一个数开始，两两比较，从而得出最小的数，最小的数
+就像泡泡那样冒上来，依次得出第二小的数、第三小的数...直至排序完毕。
 ②.选择排序
-又如这个排序一样，选择排序的原理是..." />
+又如这个排序一样，选择排序的原理..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -25,7 +26,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://Kardusen664.github.io">
-  <img class="avatar" src="https://Kardusen664.github.io/images/avatar.png?v=1599454839396" alt="">
+  <img class="avatar" src="https://Kardusen664.github.io/images/avatar.png?v=1599659836405" alt="">
   </a>
   <h1 class="site-title">
     Gridea
@@ -85,7 +86,7 @@
                 2020-09-07
               </span>
               <span>
-                2 min read
+                4 min read
               </span>
               
             </div>
@@ -94,17 +95,57 @@
               <div class="post-content">
                 <h2 id="1龟速三兄弟">1.龟速三兄弟</h2>
 <p>①.冒泡排序<br>
-如这个排序的名字一样，冒泡排序就是：从末尾一个数开始，两两<strong>比较</strong>，从而得出最小的数，最小的数就像泡泡那样冒上来，依次得出第二小的数、第三小的数...直至排序完毕。</p>
+如这个排序的名字一样，冒泡排序就是：从末尾一个数开始，两两<strong>比较</strong>，从而得出最小的数，最小的数<br>
+就像泡泡那样冒上来，依次得出第二小的数、第三小的数...直至排序完毕。</p>
 <p>②.选择排序<br>
 又如这个排序一样，选择排序的原理是固定一个位置，让该位置的数与其他数进行<strong>比较</strong>来争夺这个位置，从而最小的数被选择出来，依此类推直至排序完毕。</p>
 <p>③.插入排序<br>
-在玩扑克牌时，我们总是希望手中的牌是有序的，每当摸到一张新牌，我们总是会和前面有序的牌组两两<strong>比较</strong>，然后插入序列中。<br>
-插入排序便是基于这样一种思想，把第1个数作为一个有序的序列，依次将第2、第3...第n个数插入到有序的序列中，就完成了插入排序的过程。<br>
+在玩扑克牌时，我们总是希望手中的牌是有序的，每当摸到一张新牌，我们总是会和前面有序的牌组两两<strong>比较</strong>，然后插入序列中。</p>
+<p>插入排序便是基于这样一种思想，把第1个数作为一个有序的序列，依次将第2、第3...第n个数插入到有序的序列中，就完成了插入排序的过程。<br>
 代码：<br>
-for(int i=0; i&lt;n; i++)<br>
-for(int j=i+1; j&gt;0; j--)<br>
-if(a[j] &gt; a[j-1]) swap(a[j])<br>
-else break;(提高效率)</p>
+<img src="https://Kardusen664.github.io/post-images/1599455088518.png" alt="" loading="lazy"></p>
+<p>##2.很妙的排序<br>
+①.希尔排序<br>
+希尔排序是<strong>插入排序的优化版本</strong>，我们知道插入排序在序列是<strong>有序</strong>的时候的效率是很高的(break语句的效用)，所以我们希望在进行插入排序的时候，数组能尽量有序，于是就有了希尔排序。</p>
+<p>希尔排序中有一个增量delta，像我们小时候的跳石子游戏一样，增量delta将序列划分成为若干个子序列(具体是i, i+delta, i+2delta, ..为一个子序列)，对每个子序列进行插入排序，当delta缩成1的时候，此时的插入排序就是整个序列的排序。</p>
+<p>那么怎么样才能让每一次进行插入排序的序列相对有序？关键在<strong>delta的值</strong>上：只要我们定delta的值为n/2，再在每一轮将delta的值除以2，就可以尽量保证序列相对有序。</p>
+<p>代码：<br>
+<img src="https://Kardusen664.github.io/post-images/1599456157356.png" alt="" loading="lazy"></p>
+<p>②归并排序<br>
+归并排序运用<strong>分治</strong>的思想，将序列分成最小的一份之后，再根据大小关系将两个子序列合并，当合并的得到的序列长度为原序列时，排序结束。<br>
+由于其核心思想是分治，所以可以把排序分成两个部分完成。</p>
+<ol>
+<li>Divide<br>
+<img src="https://Kardusen664.github.io/post-images/1599521474132.png" alt="" loading="lazy"></li>
+<li>Merge<br>
+<img src="https://Kardusen664.github.io/post-images/1599551791485.png" alt="" loading="lazy"></li>
+</ol>
+<p>③快速排序</p>
+<p>④桶排序<br>
+计数排序<br>
+把数字直接放入对应的桶中，再从桶中倒出序列。<br>
+优点是<strong>耗时短，时间复杂度接近O(n)。</strong><br>
+缺点就是<strong>所需空间和数据大小有关</strong>，当数据很大的时候，所需空间太大</p>
+<p>基数排序<br>
+通过多次桶排序来进行排序，同时减少空间损耗。<br>
+以以10为基数的基数排序举例：<br>
+1).求出最大值，得出最长位数。<br>
+2).由低到高位进行桶排<br>
+取关键值digit→将数据放入桶中→按顺序将值提出回数组中<br>
+不断执行如下过程直至进行至最高位。<br>
+<strong>未改进的</strong>基数排序在面对位数不太大的数据的时候有优势。</p>
+<p>⑤堆排序<br>
+堆排序是依据数据结构堆的排序算法，包含堆的三个操作：<strong>建立，插入和删除</strong><br>
+要想从堆中得到目标有序序列，只需不断的取出并删除堆顶元素，并维护剩下的堆。<br>
+<strong>注意堆的节点中需要有一个num来标记该数据对应的序号</strong></p>
+<p>##3.sort函数<br>
+sort函数的模板有三个参数：<br>
+(1)第一个参数first：是要麦序的数组的起始地址。<br>
+(2)第二个参数last：是结束的地址(<strong>最后一个数据的后一个数据的地址</strong>)<br>
+(3)第三个参数camp是排序的方法：<em>如果第三个参数不写，则默认的排序方式是从小到大排序</em>。</p>
+<p>对于第三点：<br>
+1.元素自身包含了比较关系，如int,double等基础类型，可以直接进行比较greater&lt;&gt;() (大小于括号内的是数据类型)。<br>
+2.元素本身为class或struct，类内部需要重载&lt;运算符，实现元素的比较；</p>
 
               </div>
               <div class="toc-container">
