@@ -979,6 +979,10 @@ td {
         max-width: 50%;
       }
     
+      .post-detail .post .post-content p {
+        font-size: 32px;
+      }
+    
       .post-container .post .post-title {
         text-align: center;
       }
@@ -994,10 +998,6 @@ td {
     
       body {
         font-family: Georgia, serif;
-      }
-    
-      .toc-container {
-        display: none;
       }
     
       .main {
