@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Kardusen664.github.io</id>
     <title>喵屋</title>
-    <updated>2021-05-19T13:21:55.002Z</updated>
+    <updated>2021-05-19T13:22:25.584Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Kardusen664.github.io"/>
     <link rel="self" href="https://Kardusen664.github.io/atom.xml"/>
@@ -10,4 +10,13 @@
     <logo>https://Kardusen664.github.io/images/avatar.png</logo>
     <icon>https://Kardusen664.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 喵屋</rights>
+    <entry>
+        <title type="html"><![CDATA[嘟嘟嘟]]></title>
+        <id>https://Kardusen664.github.io/post/du-du-du/</id>
+        <link href="https://Kardusen664.github.io/post/du-du-du/">
+        </link>
+        <updated>2021-05-19T13:21:41.000Z</updated>
+        <content type="html"><![CDATA[<p>没有什么东西</p>
+]]></content>
+    </entry>
 </feed>
