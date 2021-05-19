@@ -979,10 +979,6 @@ td {
         max-width: 50%;
       }
     
-      .post-detail .post .post-content p {
-        font-size: 4px;
-      }
-    
       .post-container .post .post-title {
         text-align: center;
       }
@@ -1000,8 +996,16 @@ td {
         font-family: Georgia, serif;
       }
     
+      .toc-container {
+        display: none;
+      }
+    
       .main {
         background: #ffdeeb;
+      }
+    
+      body {
+        color: #212529;
       }
     
       body 
