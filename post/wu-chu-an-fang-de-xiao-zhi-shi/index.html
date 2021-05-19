@@ -2,30 +2,21 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Markdown应用指南 | Gridea</title>
+<title>无处安放的小知识 | Gridea</title>
 <link rel="shortcut icon" href="https://Kardusen664.github.io/favicon.ico?v=1621425224562">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://Kardusen664.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Markdown应用指南 | Gridea - Atom Feed" href="https://Kardusen664.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="无处安放的小知识 | Gridea - Atom Feed" href="https://Kardusen664.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="对字的编辑
-1.标题
-
-一个#号为一级标题，两个#号为二级标题，依次类推。
-
-2.加粗/斜体
-
-一个号内的内容以斜体形式展示，两个号内的内容为粗体，三个*号内的内容为粗斜体。
-
-3.删除线(划掉)
-
-在文字前后添加~~
-
-对段的编辑
-1.有..." />
+    <meta name="description" content="1.typedef
+①为特定含义的类型取别名
+eg.typedef long long ll;
+好处：在修改元素类型的时候可以只修改一处；可以直截了当的得知变量的含义；方便写；
+②为结构体取别名。
+不过有的人认为这样做并不是一个明智的选择，..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -88,50 +79,77 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              Markdown应用指南
+              无处安放的小知识
             </h2>
             <div class="post-info">
               <span>
-                2020-09-04
+                2020-09-09
               </span>
               <span>
-                1 min read
+                3 min read
               </span>
               
             </div>
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p><strong>对字的编辑</strong><br>
-1.<strong>标题</strong></p>
-<ul>
-<li>一个#号为一级标题，两个#号为二级标题，依次类推。</li>
-</ul>
-<p>2.<strong>加粗/斜体</strong></p>
-<ul>
-<li>一个<em>号内的内容以斜体形式展示，两个</em>号内的内容为粗体，三个*号内的内容为粗斜体。</li>
-</ul>
-<p>3.<strong>删除线</strong>(划掉)</p>
-<ul>
-<li>在文字前后添加~~</li>
-</ul>
-<p><strong>对段的编辑</strong><br>
-1.<strong>有序列表</strong></p>
-<ul>
-<li>在行首增加 1.、2.、3.，即数字和英文句点, 注意句点与文字中间有空格。</li>
-</ul>
-<p>2.<strong>无序列表</strong></p>
-<ul>
-<li>在行首添加*或-</li>
-</ul>
-<p>3.<strong>引用</strong></p>
-<ul>
-<li>在文字前添加' &gt;'</li>
-</ul>
-<p><strong>写代码</strong><br>
-用```把代码框起来，就可以在里面使用tab缩进啦！</p>
-<p><strong>划掉</strong><br>
-<s>在文字前后加上两条波浪线</s></p>
+                <p>1.typedef<br>
+①为特定含义的类型<em>取别名</em><br>
+eg.typedef long long ll;<br>
+好处：在修改元素类型的时候可以只修改一处；可以直截了当的得知变量的含义；<s>方便写</s>；<br>
+②为结构体取别名。<br>
+<em>不过有的人认为这样做并不是一个明智的选择，因为它在使用的时候不能<strong>直观</strong>看到它是结构体类型了。</em></p>
+<pre><code>struct node{
+    int l; int r; int val;
+};
+</code></pre>
+<p>那么你在声明变量的时候，需要带上struct, 即：<br>
+<code>struct node a[maxn + 5];</code><br>
+但是如果你用typedef取个别名呢？</p>
+<pre><code>typedef struct node
+{
+    int l; int r; int val;
+} Treenode; 
+</code></pre>
+<p>你就可以这样使用了：<br>
+<code>Treenode a[maxn +5]</code></p>
+<p>一句话理解：typedef中声明的类型在变量名的位置出现。</p>
+<p>2.class 和 struct 没有什么不同，只不过：<br>
+①class的类型默认是private, struct的类型默认是public<br>
+②在class中可以编写对象的<strong>行为</strong>，也就是函数。</p>
+<p>3.面向对象和面向过程<br>
+<em>浇盖饭与蛋炒饭</em></p>
+<p>4.三目运算符<br>
+三目运算符是<strong>一个固定格式格式为？：的语句</strong><br>
+结构为&lt;表达式1&gt;？&lt;表达式2&gt;：&lt;表达式3&gt;<br>
+如果第一个表达式为真，那么就做问号后面的语句，不然就做最后的语句</p>
+<p>5.c++中switch语句的语法：<br>
+①在一个switch中可以有任意数量的case语句。每个case后跟一个要比较的值和一个冒号。<br>
+②当（）时，case后的语句被执行，直到遇到break语句为止。<br>
+③当遇到break语句时，switch终止，控制流将跳转到<em>switch语句后</em>的下一行，<br>
+④不是每一个case都需要包含break。如果case语句不包含break，控制流将会<em>继续后续的case，直到遇到break为止。</em><br>
+⑤一个switch语句可以有一个可选的<strong>default</strong>语句，出现在switch的结尾。<strong>default case</strong>可用于在上面<strong>所有case都不为真</strong>时执行一个任务。</p>
+<pre><code>    switch(a){
+        case 1:
+            ...
+            break;
+        case2:
+        default
+    }
+    ```
+6.c++传值和传引用
+</code></pre>
+<p>void fun_1(int a);      //int类型，传值（复制产生新变量）<br>
+void fun_2(int&amp; a);     //int类型，传引用（形参和实参是同一个东西）<br>
+void fun_3(int* arr);   //指针类型，传值（复制产生新变量）<br>
+void fun_4(int*&amp; arr);  //指针类型，传引用（形参和实参是同一个东西）</p>
+<pre><code>7.逻辑运算符优先级问题
+   1.*和&amp;的优先级相同，**具有右结合性**。
+   2.逻辑且运算&amp;&amp;的优先级比或运算||高。
+
+8.多组数据的处理:
+while(**~**scanf(...))
+</code></pre>
 
               </div>
               <div class="toc-container">
@@ -144,9 +162,9 @@
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://Kardusen664.github.io/post/test/">
+            <a href="https://Kardusen664.github.io/post/pai-xu/">
               <h3 class="post-title">
-                test
+                排序
               </h3>
             </a>
           </div>

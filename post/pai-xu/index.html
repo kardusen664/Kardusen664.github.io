@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>排序 | Gridea</title>
-<link rel="shortcut icon" href="https://Kardusen664.github.io/favicon.ico?v=1599659868199">
+<link rel="shortcut icon" href="https://Kardusen664.github.io/favicon.ico?v=1621425224562">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://Kardusen664.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="排序 | Gridea - Atom Feed" href="https://Kardusen664.github.io/atom.xml">
@@ -26,7 +26,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://Kardusen664.github.io">
-  <img class="avatar" src="https://Kardusen664.github.io/images/avatar.png?v=1599659868199" alt="">
+  <img class="avatar" src="https://Kardusen664.github.io/images/avatar.png?v=1621425224562" alt="">
   </a>
   <h1 class="site-title">
     Gridea
@@ -86,7 +86,7 @@
                 2020-09-07
               </span>
               <span>
-                4 min read
+                5 min read
               </span>
               
             </div>
@@ -146,6 +146,15 @@ sort函数的模板有三个参数：<br>
 <p>对于第三点：<br>
 1.元素自身包含了比较关系，如int,double等基础类型，可以直接进行比较greater&lt;&gt;() (大小于括号内的是数据类型)。<br>
 2.元素本身为class或struct，类内部需要重载&lt;运算符，实现元素的比较；</p>
+<h1 id="问题">问题</h1>
+<h2 id="1求第k大的数">1.求第k大的数。</h2>
+<p>首先我们当然可以将数组排序然后输出，时间复杂度为O(nlogn)。<br>
+<strong>优化</strong>：利用快速排序二分的思想，由于一次快排后数组将会分成三部分，其中左边比标准数小而右边大，<strong>所以第k小的值只会在一个区间里</strong>，从而只用查找那个区间，降低了时间复杂度。</p>
+<pre><code>if(k∈[l. j]) qsort(i, j);
+    else if(k∈[j,r]) qsort(j, r);
+        else printf(&quot;%d&quot;, a[k]);
+</code></pre>
+<p>(由于k肯定在[l,r]里面，所以一半的边界可以省掉不写)</p>
 
               </div>
               <div class="toc-container">
@@ -153,6 +162,11 @@ sort函数的模板有三个参数：<br>
 <li>
 <ul>
 <li><a href="#1%E9%BE%9F%E9%80%9F%E4%B8%89%E5%85%84%E5%BC%9F">1.龟速三兄弟</a></li>
+</ul>
+</li>
+<li><a href="#%E9%97%AE%E9%A2%98">问题</a>
+<ul>
+<li><a href="#1%E6%B1%82%E7%AC%ACk%E5%A4%A7%E7%9A%84%E6%95%B0">1.求第k大的数。</a></li>
 </ul>
 </li>
 </ul>
